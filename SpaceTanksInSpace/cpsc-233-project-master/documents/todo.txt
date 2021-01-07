@@ -1,0 +1,15 @@
+TODO:
+ - Controls for moving and shooting the tank
+ - In TankBase, make a shoot() function that spawns a bullet so we don't have to keep copy-pasting the bullet 
+   spawning code
+ - If a bullet hits the player, the player dies
+
+TODO AFTER THAT:
+ - Make some art
+ - Transition to textures
+
+Eventually:
+ - Game over screen
+ - Main menu
+ - Enemy tanks
+ - Whenever the player kills all the enemy tanks, generate a new and harder level

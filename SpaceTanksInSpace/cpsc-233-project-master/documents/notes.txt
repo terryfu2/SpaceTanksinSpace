@@ -1,0 +1,24 @@
+- The whole game uses continuous coordinates, NOT a grid. TextRenderer emulates a low-resolution screen
+by rounding all positions and drawing them approximately where they should be.
+Because of this, there might be some artifacts like objects appearing to be inside walls. This is only
+a rendering artifact, and the object is not actually inside the wall.
+
+- Most of the game's systems make use of an immutable Vector2f class to handle X and Y as a pair.
+
+- We were trying to make bullets bounce off walls, but we couldn't get it working right in time for
+the deadline, so it's temporarily disabled for this demo. As a result, Map.raycast() and RaycastHit
+are unused for the time being.
+
+- The map is procedurally generated, but for this demo, the seed is set to 0.
+
+COMMANDS:
+- move <x> <y> -- move X pixels horizontally and Y pixels vertically. Each square is 32 pixels.
+- aim <d> -- aim the turret D degrees anticlockwise from (0, 1)
+- shoot -- shoot a bullet where the turret is aiming
+- exit -- exit the demo
+- [empty line] -- allow one second to pass (useful for watching bullets moving)
+
+SYMBOLS:
+[] -- a wall
+x -- the player's tank
+. -- a bullet
